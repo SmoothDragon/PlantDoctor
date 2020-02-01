@@ -1,0 +1,165 @@
+    3  ls /dev/v4l/by-id/
+    4  cheese
+    5  sudo dpkg --add-architecture armhf
+    6  sudo apt update
+    7  sudo apt upgrade
+    8  sudo apt-get install -y build-essential cmake pkg-config wget lsb-release apt-utils libusb-1.0.0
+    9  sudo apt autoremove
+   10  wget https://download.01.org/opencv/2019/openvinotoolkit/R3/l_openvino_toolkit_runtime_raspbian_p_2019.3.334.tgz
+   11  tar -xf l_openvino_toolkit_runtime_raspbian_p_2019.3.334.tgz 
+   13  cd l_openvino_toolkit_runtime_raspbian_p_2019.3.334/
+   15  cd ..
+   16  mv l_openvino_toolkit_runtime_raspbian_p_2019.3.334 openvino
+   17  cd openvino/
+   27  ./setupvars.sh 
+   34  cd install_dependencies/
+   35  ls
+   36  ./install_NCS_udev_rules.sh 
+   37  source ~/openvino/bin/setupvars.sh 
+   38  cd ../inference_engine
+   39  ls
+   40  cd samples/
+   41  ls
+   42  mkdir build
+   43  cd build/
+   44  cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-march=armv7-a"
+   45  make -j4 object_detection_sample_ssd
+   46  echo "source ~/openvino/bin/setupvars.sh" >> ~/.bashrc
+
+    1  sh /opt/intel/openvino/install_dependencies/install_NCS_udev_rules.sh
+    2  sh ~/openvino/install_dependencies/install_NCS_udev_rules.sh
+    3  cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-march=armv7-a" /opt/intel/openvino/deployment_tools/inference_engine/samples
+    4  cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-march=armv7-a" ~/openvino/deployment_tools/inference_engine/samples
+    5  lsusb
+    6  make -j2 object_detection_sample_ssd
+    7  wget --no-check-certificate https://download.01.org/opencv/2019/open_model_zoo/R1/models_bin/face-detection-adas-0001/FP16/face-detection-adas-0001.bin
+    8  wget --no-check-certificate https://download.01.org/opencv/2019/open_model_zoo/R1/models_bin/face-detection-adas-0001/FP16/face-detection-adas-0001.xml
+    9  ./armv7l/Release/object_detection_sample_ssd -m face-detection-adas-0001.xml -d MYRIAD -i <path_to_image>
+   10  ls
+   11  wget --no-check-certificate https://download.01.org/opencv/2019/open_model_zoo/R1/models_bin/face-detection-adas-0001/FP16/face-detection-adas-0001.bin
+   12  wget --no-check-certificate https://download.01.org/opencv/2019/open_model_zoo/R1/models_bin/face-detection-adas-0001/FP16/face-detection-adas-0001.xml
+   13  apt seach opencv
+   14  apt search opencv
+   15  apt install python3-opencv
+   16  sudo apt install python3-opencv
+   17  vim
+   18  vi
+   19  nano
+   20  vi openvino_fd_myriad.py
+   21  python3 openvino_fd_myriad.py
+   22  ls
+   23  find . -name "*.png"
+   24  find . -name "*.jpg"
+   25  cd ../..
+   26  find . -name "*.png"
+   27  find . -name "*.jpg"
+   28  cheese
+   29  ls
+   30  cd -
+   31  python3 openvino_fd_myriad.py
+   32  vi openvino_fd_myriad.py
+   33  python3 openvino_fd_myriad.py
+   34  ls
+   35  eog
+   36  sudo apt search eog
+   37  sudo apt install eog
+   38  eog out.png 
+   39  ls
+   40  cd hello_classification/
+   41  ls
+   42  vi Makefile 
+   43  cd ..
+   44  ls
+   45  rm face-detection-adas-0001.bin.1 
+   46  rm face-detection-adas-0001.xml.1 
+   47  ls
+   48  cd
+   49  mkdir plant
+   50  cd plant
+   51  ls
+   52  streamer -c /dev/video0 -b 16 -o test0.jpg
+   53  sudo apt search streamer
+   54  sudo apt install streamer
+   55  history
+   56  history | grep install
+   57  ls
+   58  streamer -c /dev/video0 -b 16 -o test0.jpg
+   59  streamer -c /dev/video0 -b 16 -o test0.jpeg
+   60  ls
+   61  eog test0.jpeg 
+   62  streamer -c /dev/video1 -b 16 -o test1.jpeg
+   63  streamer -c /dev/video10 -b 16 -o test10.jpeg
+   64  streamer -c /dev/video11 -b 16 -o test11.jpeg
+   65  streamer -c /dev/video12 -b 16 -o test12.jpeg
+   66  ls /dev/video
+   67  streamer -c /dev/video3 -b 16 -o test3.jpeg
+   68  ls
+   69  streamer -c /dev/video2 -b 16 -o test2.jpeg
+   70  eog test2.jpeg 
+   71  ls
+   72  vi capture_test.py
+   73  ls
+   74  python3 capture_test.py 
+   75  ipython3
+   76  sudo apt ipython3
+   77  sudo apt install ipython3
+   78  ipython3
+   79  vi capture_test.py
+   80  python3 capture_test.py 
+   81  vi capture_test.py
+   82  python3 capture_test.py 
+   83  ls
+   84  ls /dev/video*
+   85  vi capture_test.py
+   86  python3 capture_test.py 
+   87  vi capture_test.py
+   88  python3 capture_test.py 
+   89  vi capture_test.py
+   90  python3 capture_test.py 
+   91  ls
+   92  time python3 capture_test.py 
+   93  ls -al
+   94  date
+   95  time python3 capture_test.py 
+   96  ls -al
+   97  ls
+   98  ls -alh
+   99  df -h
+  100  ls usb
+  101  lsusb
+  102  ls /dev/v4l/by-id/
+  103  ls
+  104  ls /dev/v4l/by-path/platform-
+  105  ls /dev/v4l/by-path/platform-*
+  106  ls /dev/v4l/by-id/usb-Image_Processor_USB_2.0_PC_Cam-video-index*
+  107  git
+  108  cd ..
+  109  ls
+  110  git clone https://github.com/SmoothDragon/PlantDoctor.git
+  111  cd plant/
+  112  ls
+  113  mv * ../PlantDoctor/
+  114  cd ..
+  115  rmdir plant/
+  116  ks
+  117  cd PlantDoctor/
+  118  ls
+  119  rm *.jpeg
+  120  ls
+  121  vim .gitignore
+  122  vi .gitignore
+  123  ls
+  124  git status
+  125  git add .gitignore capture_test.py 
+  126  git commit -m "Let's get this party started."
+  127  git config --global user.email "tgdrape@gmail.com"
+  128  git config --global user.name "Tom Draper"
+  129  git commit -m "Let's get this party started."
+  130  git push
+  131  ls
+  132  vim TODO.txt
+  133  history
+  134  vim InstallCommands.txt
+  135  vi InstallCommands.txt
+  136  ls
+  137  history  >> InstallCommands.txt 
